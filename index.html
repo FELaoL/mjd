@@ -7,6 +7,7 @@
 		<title>Document</title>
 		<link rel="stylesheet" href="./css/normalize.css" />
 		<link rel="stylesheet" href="./css/index.css" />
+		<link rel="stylesheet" href="./swiper/swiper-bundle.min.css" />
 	</head>
 	<body>
 		<!-- 顶部 -->
@@ -34,8 +35,38 @@
 		<!-- 主体部分 -->
 		<div class="main-content">
 			<!-- 滑动图 -->
-			<div class="slider">
+			<!-- <div class="slider">
 				<img src="./img/slider1.png" alt="" />
+			</div> -->
+			<!-- Swiper -->
+			<div class="slider swiper">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<img src="./img/slider1.png" alt="" />
+					</div>
+					<div class="swiper-slide">
+						<img src="./img/slider1.png" alt="" />
+					</div>
+					<div class="swiper-slide">
+						<img src="./img/slider1.png" alt="" />
+					</div>
+					<div class="swiper-slide">
+						<img src="./img/slider1.png" alt="" />
+					</div>
+					<div class="swiper-slide">
+						<img src="./img/slider1.png" alt="" />
+					</div>
+					<div class="swiper-slide">
+						<img src="./img/slider1.png" alt="" />
+					</div>
+					<div class="swiper-slide">
+						<img src="./img/slider1.png" alt="" />
+					</div>
+					<div class="swiper-slide">
+						<img src="./img/slider1.png" alt="" />
+					</div>
+				</div>
+				<div class="swiper-pagination"></div>
 			</div>
 			<!-- 小家电品牌日 -->
 			<div class="brand">
@@ -70,5 +101,21 @@
 				</div>
 			</div>
 		</div>
+		<script src="./swiper/swiper-bundle.min.js"></script>
+		<script>
+			var swiper = new Swiper(".slider", {
+				autoplay: {
+					delay: 1000,
+					// loop: true,
+					stopOnLastSlide: false,
+					disableOnInteraction: false,
+					observer: true, //开启动态检查器，监测swiper和slide
+					observeParents: true //监测Swiper 的祖/父元素
+				},
+				pagination: {
+					el: ".swiper-pagination"
+				}
+			});
+		</script>
 	</body>
 </html>
